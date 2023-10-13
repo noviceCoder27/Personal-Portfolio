@@ -20,6 +20,28 @@ const Navbar = () => {
         closed: {opacity: 0, x: "100%"}
     }
 
+    const childVariantsDesktop = {
+        initial: {
+            width: "0"
+        },
+        hover: {
+            width: "100%"
+        }
+    }
+
+    const childVariantsMobile = {
+        initial: {
+           opacity: "0",
+           x: "-100%"
+        
+        },
+        hover: {
+          background: "red",
+          opacity: "1",
+          x: "0%"
+        }
+    }
+
     const scrollToTop = (device) => {
         document.body.scrollTop = 0; 
         document.documentElement.scrollTop = 0;
@@ -39,19 +61,64 @@ const Navbar = () => {
     }
 
     return (
-        <header className='sticky top-0 z-10 w-full backdrop-blur-md'>
+        <header className='sticky top-0 z-10 w-full backdrop-blur-md max-md:mb-32'>
             <div className='flex items-center justify-between px-4 py-6'>
                 <div className='flex items-center gap-10 cursor-pointer'>
                 <div className='font-mono text-3xl text-red-400'>
                     {"< Mugdha />"}
                 </div>
-                    <div className={`max-md:hidden font-poppins flex gap-4 ${isDark ? 'text-white': 'text-black'}`}>
-                        <button onClick={() => scrollToTop('desktop')}>Home</button>
-                        <a href = "#about" onClick={(e) => moveScroll(e,'desktop',500)}>About</a>
-                        <a href = "#projects" onClick={(e) => moveScroll(e,'desktop',1100)}>Projects</a>
-                        <a href = "#skills" onClick={(e) => moveScroll(e,'desktop',2200)}>Skills</a>
-                        <a href = "#education" onClick={(e) => moveScroll(e,'desktop',2700)}>Education</a>
-                    </div>500
+                    <div className={`max-md:hidden font-poppins md:mt-2 flex gap-4 ${isDark ? 'text-white': 'text-black'}`}>
+                        <motion.div
+                        initial = "initial"
+                        whileHover="hover">  
+                            <button onClick={() => scrollToTop('desktop')}>Home</button>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsDesktop}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#projects" onClick={(e) => moveScroll(e,'desktop',500)}>About</a>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsDesktop}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#projects" onClick={(e) => moveScroll(e,'desktop',1100)}>Projects</a>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsDesktop}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#skills" onClick={(e) => moveScroll(e,'desktop',2200)}>Skills</a>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsDesktop}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#education" onClick={(e) => moveScroll(e,'desktop',2700)}>Education</a>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsDesktop}
+                            >
+                            </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
         
                 <div className='flex items-center gap-4 '>
@@ -62,15 +129,65 @@ const Navbar = () => {
                 </div>
             </div>
             <motion.div 
-            className={`sticky pb-4 right-0 md:hidden min-w-[20vw] backdrop-blur-md px-4 flex flex-col text-end gap-4 ${isDark ? 'text-white': 'text-black'} ${showMenu ? 'flex': 'hidden'}`}
+            className={`sticky pb-4 right-0 max-md:-mb-32 md:hidden min-w-[20vw] backdrop-blur-md px-4 flex flex-col text-end gap-4 ${isDark ? 'text-white': 'text-black'} ${showMenu ? 'flex': 'hidden'}`}
             animate = {showMenu ? "open": "closed"}
             variants={menuStyles}
             >
-                <button onClick={() => scrollToTop('mobile')} className='ml-auto w-fit'>Home</button>
-                <a href = "#about" onClick={(e) => moveScroll(e,'mobile',600)}>About</a>
-                <a href = "#projects" onClick={(e) => moveScroll(e,'mobile',1500)}>Projects</a>
-                <a href = "#skills" onClick={(e) => moveScroll(e,'mobile',3000)}>Skills</a>
-                <a href = "#education" onClick={(e) => moveScroll(e,'mobile',3500)}>Education</a>
+                <motion.div
+                        className='ml-auto w-fit'
+                        initial = "initial"
+                        whileHover="hover">  
+                            <button onClick={() => scrollToTop('mobile')}>Home</button>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsMobile}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                         className='ml-auto w-fit'
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#projects" onClick={(e) => moveScroll(e,'mobile',600)}>About</a>
+                            <motion.div 
+                            className='h-1 ' 
+                            variants={childVariantsMobile}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        className='ml-auto w-fit'
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#projects" onClick={(e) => moveScroll(e,'mobile',1500)}>Projects</a>
+                            <motion.div 
+                            className='h-1 ' 
+                            variants={childVariantsMobile}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        className='ml-auto w-fit'
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#skills" onClick={(e) => moveScroll(e,'mobile',3000)}>Skills</a>
+                            <motion.div 
+                            className='h-1 ' 
+                            variants={childVariantsMobile}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        className='ml-auto w-fit'
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#education" onClick={(e) => moveScroll(e,'mobile',3500)}>Education</a>
+                            <motion.div 
+                            className='h-1' 
+                            variants={childVariantsMobile}
+                            >
+                            </motion.div>
+                        </motion.div>
             </motion.div>
         </header>
     )

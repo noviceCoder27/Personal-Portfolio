@@ -8,7 +8,7 @@ const HigherSchooling = () => {
   return (
     <div className={`flex gap-10 `}>
       <div>
-          <div className={` p-8 flex flex-col gap-4 rounded-lg ${isDark ? 'bg-[#232323]' : 'bg-gray-200'}`}>
+          <div className={` max-md:w-[80vw] p-8 flex flex-col gap-4 rounded-lg ${isDark ? 'bg-[#232323]' : 'bg-gray-200'}`}>
           <div className="flex items-center gap-2 text-xl">
               <AiOutlineCalendar className="mb-1 text-2xl"/>
               <p>2016-2018</p>

@@ -8,7 +8,7 @@ import Skills from "../components/Skills"
 
 const Home = () => {
   return (
-    <main className="flex flex-col gap-16 p-4 max-md:pt-32 font-poppins ">
+    <main className="flex flex-col gap-16 p-4 font-poppins ">
       <Hero />
       <About />
       <Projects />

@@ -41,11 +41,11 @@ const Education = () => {
             <div className="absolute top-0 w-8 h-8 bg-red-500 rounded-full -left-14"></div>
           </div>
           <div>
-            <School />
+            <HigherSchooling />
             <div className="absolute w-8 h-8 bg-red-500 rounded-full top-[20rem] -left-14"></div>
           </div>
           <div>
-            <HigherSchooling />
+            <School />
             <div className="absolute top-[40rem] w-8 h-8 bg-red-500 rounded-full -left-14"></div>
           </div>
         </div>
