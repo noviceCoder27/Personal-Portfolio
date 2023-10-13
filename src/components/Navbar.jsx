@@ -30,10 +30,12 @@ const Navbar = () => {
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop
     }
 
-    const moveScroll = (e) => {
+    const moveScroll = (e,device,distance) => {
         e.preventDefault();
-        setShowMenu(prev => !prev);
-        window.scrollTo({top: 500, behavior: 'smooth'});
+        if(device === 'mobile') {
+            setShowMenu(prev => !prev);   
+        }
+        window.scrollTo({top: distance, behavior: 'smooth'});
     }
 
     return (
@@ -45,11 +47,11 @@ const Navbar = () => {
                 </div>
                     <div className={`max-md:hidden font-poppins flex gap-4 ${isDark ? 'text-white': 'text-black'}`}>
                         <button onClick={() => scrollToTop('desktop')}>Home</button>
-                        <a href = "#about" onClick={(e) => moveScroll(e)}>About</a>
-                        <a href = "#skills" onClick={(e) => moveScroll(e)}>Skills</a>
-                        <a href = "#projects" onClick={(e) => moveScroll(e)}>Projects</a>
-                        <a href = "#education" onClick={(e) => moveScroll(e)}>Education</a>
-                    </div>
+                        <a href = "#about" onClick={(e) => moveScroll(e,'desktop',500)}>About</a>
+                        <a href = "#projects" onClick={(e) => moveScroll(e,'desktop',1100)}>Projects</a>
+                        <a href = "#skills" onClick={(e) => moveScroll(e,'desktop',2200)}>Skills</a>
+                        <a href = "#education" onClick={(e) => moveScroll(e,'desktop',2700)}>Education</a>
+                    </div>500
                 </div>
         
                 <div className='flex items-center gap-4 '>
@@ -65,10 +67,10 @@ const Navbar = () => {
             variants={menuStyles}
             >
                 <button onClick={() => scrollToTop('mobile')} className='ml-auto w-fit'>Home</button>
-                <a href = "#about" onClick={(e) => moveScroll(e)}>About</a>
-                <a href = "#skills" onClick={(e) => moveScroll(e)}>Skills</a>
-                <a href = "#projects" onClick={(e) => moveScroll(e)}>Projects</a>
-                <a href = "#education" onClick={(e) => moveScroll(e)}>Education</a>
+                <a href = "#about" onClick={(e) => moveScroll(e,'mobile',600)}>About</a>
+                <a href = "#projects" onClick={(e) => moveScroll(e,'mobile',1500)}>Projects</a>
+                <a href = "#skills" onClick={(e) => moveScroll(e,'mobile',3000)}>Skills</a>
+                <a href = "#education" onClick={(e) => moveScroll(e,'mobile',3500)}>Education</a>
             </motion.div>
         </header>
     )

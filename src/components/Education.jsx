@@ -24,13 +24,13 @@ const Education = () => {
           <College />
           <div className=" relative mt-[22rem]">
             <School /> 
-            <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -right-14"></div>
+            <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -right-[3.6rem]"></div>
           </div> 
-          <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -right-14"></div>
+          <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -right-[3.6rem]"></div>
         </div>
         <div className=" relative order-2 mt-[20rem]">
-          <HigherSchooling/>
-          <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -left-14"></div>
+          <HigherSchooling/> 
+          <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -left-[3.6rem]"></div>
         </div>
       </div>
       <div className="flex gap-10 mt-20">
