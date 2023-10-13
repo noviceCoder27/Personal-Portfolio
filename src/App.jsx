@@ -1,4 +1,3 @@
-import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import LoadingScreen from './pages/LoadingScreen';
@@ -22,15 +21,11 @@ function App() {
   },[isDark]);
   
   return (
-    <Router>
-      <div className={`min-h-screen ${isDark ? 'bg-black': 'bg-white'}`}>
-        {!showLoadingScreen && <Navbar />}
-        <Routes>
-          {showLoadingScreen && <Route path = '/' element = {<LoadingScreen />}/>}
-          {!showLoadingScreen && <Route path = '/' element = {<Home />}/>}
-        </Routes>
-      </div>
-    </Router>
+    <div className={`min-h-screen md:px-20 ${isDark ? 'bg-black': 'bg-white'}`}>
+      {!showLoadingScreen && <Navbar />}
+        {showLoadingScreen && <LoadingScreen />}
+        {!showLoadingScreen && <Home />}
+    </div>
   )
 }
 
