@@ -125,7 +125,7 @@ const Navbar = () => {
                     {isDark && <PiSunLight className={`text-2xl cursor-pointer ${isDark ? 'text-white': 'text=black'}`} onClick={setTheme}/>}
                     {!isDark && <PiMoonLight className={`text-2xl cursor-pointer ${isDark ? 'text-white': 'text=black'}`} onClick={setTheme}/>}
                     {!showMenu && <AiOutlineMenu onClick = {() => setShowMenu(prev => !prev)} className={`md:hidden text-4xl cursor-pointer ${isDark ? 'text-white': 'text-black'}`}/>}
-                    {showMenu && <RxCross1 onClick = {() => setShowMenu(prev => !prev)} className={`text-4xl cursor-pointer ${isDark ? 'text-white': 'text=black'}`}/>}
+                    {showMenu && <RxCross1 onClick = {() => setShowMenu(prev => !prev)} className={`text-4xl cursor-pointer md:hidden ${isDark ? 'text-white': 'text=black'}`}/>}
                 </div>
             </div>
             <motion.div 
