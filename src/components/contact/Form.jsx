@@ -4,7 +4,7 @@ import {BiRightArrow} from 'react-icons/bi'
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
 import { toastError, toastSuccess } from "../../utils/toast";
-const env = import.meta.env;
+const env = import.meta.env.PROD || import.meta.env;
 
 
 const Form = () => {
