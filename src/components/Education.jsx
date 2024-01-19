@@ -33,20 +33,20 @@ const Education = () => {
           <div className="absolute w-8 h-8 bg-red-500 rounded-full -top-2 -left-[3.6rem]"></div>
         </div>
       </div>
-      <div className="flex gap-10 mt-20">
+      <div className="flex gap-10 mt-20 max-sm:gap-4">
         <div className="w-1 bg-[#232323] rounded-md "></div>
         <div className="relative flex flex-col gap-10 md:hidden">
-          <div>
+          <div className="relative">
             <College />
-            <div className="absolute top-0 w-8 h-8 bg-red-500 rounded-full -left-14"></div>
+            <div className="absolute top-0 w-8 h-8 bg-red-500 rounded-full -left-14 max-sm:-left-[1.9rem] max-sm:w-6 max-sm:h-6"></div>
           </div>
-          <div>
+          <div className="relative">
             <HigherSchooling />
-            <div className="absolute w-8 h-8 bg-red-500 rounded-full top-[20rem] -left-14"></div>
+            <div className="absolute top-0 w-8 h-8 bg-red-500 rounded-full max -left-14 max-sm:-left-[1.9rem] max-sm:w-6 max-sm:h-6"></div>
           </div>
-          <div>
+          <div className="relative">
             <School />
-            <div className="absolute top-[40rem] w-8 h-8 bg-red-500 rounded-full -left-14"></div>
+            <div className="absolute top-0 w-8 h-8 bg-red-500 rounded-full max -left-14 max-sm:-left-[1.9rem] max-sm:w-6 max-sm:h-6"></div>
           </div>
         </div>
       </div>

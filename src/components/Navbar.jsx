@@ -118,6 +118,16 @@ const Navbar = () => {
                             >
                             </motion.div>
                         </motion.div>
+                        <motion.div
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#contact" onClick={(e) => moveScroll(e,'desktop',3800)}>Contact Me</a>
+                            <motion.div 
+                            className='h-1 bg-red-500' 
+                            variants={childVariantsDesktop}
+                            >
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
         
@@ -181,7 +191,18 @@ const Navbar = () => {
                         className='ml-auto w-fit'
                         initial = "initial"
                         whileHover="hover">
-                            <a href = "#education" onClick={(e) => moveScroll(e,'mobile',3500)}>Education</a>
+                            <a href = "#education" onClick={(e) => moveScroll(e,'mobile',3600)}>Education</a>
+                            <motion.div 
+                            className='h-1' 
+                            variants={childVariantsMobile}
+                            >
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                        className='ml-auto w-fit'
+                        initial = "initial"
+                        whileHover="hover">
+                            <a href = "#contact" onClick={(e) => moveScroll(e,'mobile',5200)}>Contact Me</a>
                             <motion.div 
                             className='h-1' 
                             variants={childVariantsMobile}

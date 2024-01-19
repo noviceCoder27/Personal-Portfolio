@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { ThemeContext } from "../utils/Context"
 import Project from "./projects/Project"
-
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const {isDark} = useContext(ThemeContext);
@@ -17,6 +17,7 @@ const Projects = () => {
       <div className="flex flex-col gap-24">
         <Project id = {1}/>
         <Project id = {2}/>
+        <a className = "p-4 ml-auto mr-auto bg-red-400 rounded-md cursor-pointer hover:bg-red-500">View More <span> <FaGithub /> </span></a>
       </div>
     </div>
   )
