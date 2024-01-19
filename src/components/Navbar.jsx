@@ -64,9 +64,9 @@ const Navbar = () => {
         <header className='sticky top-0 z-10 w-full backdrop-blur-md max-md:mb-32'>
             <div className='flex items-center justify-between px-4 py-6'>
                 <div className='flex items-center gap-10 cursor-pointer'>
-                <div className='font-mono text-3xl text-red-400'>
-                    {"< Mugdha />"}
-                </div>
+                    <div className='font-mono text-3xl text-red-400 cursor-default'>
+                        {"< Mugdha />"}
+                    </div>
                     <div className={`max-md:hidden font-poppins md:mt-2 flex gap-4 ${isDark ? 'text-white': 'text-black'}`}>
                         <motion.div
                         initial = "initial"
@@ -112,16 +112,6 @@ const Navbar = () => {
                         initial = "initial"
                         whileHover="hover">
                             <a href = "#education" onClick={(e) => moveScroll(e,'desktop',2700)}>Education</a>
-                            <motion.div 
-                            className='h-1 bg-red-500' 
-                            variants={childVariantsDesktop}
-                            >
-                            </motion.div>
-                        </motion.div>
-                        <motion.div
-                        initial = "initial"
-                        whileHover="hover">
-                            <a href = "#contact" onClick={(e) => moveScroll(e,'desktop',3800)}>Contact Me</a>
                             <motion.div 
                             className='h-1 bg-red-500' 
                             variants={childVariantsDesktop}
@@ -192,17 +182,6 @@ const Navbar = () => {
                         initial = "initial"
                         whileHover="hover">
                             <a href = "#education" onClick={(e) => moveScroll(e,'mobile',3600)}>Education</a>
-                            <motion.div 
-                            className='h-1' 
-                            variants={childVariantsMobile}
-                            >
-                            </motion.div>
-                        </motion.div>
-                        <motion.div
-                        className='ml-auto w-fit'
-                        initial = "initial"
-                        whileHover="hover">
-                            <a href = "#contact" onClick={(e) => moveScroll(e,'mobile',5200)}>Contact Me</a>
                             <motion.div 
                             className='h-1' 
                             variants={childVariantsMobile}

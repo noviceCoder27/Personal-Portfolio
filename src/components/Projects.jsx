@@ -17,7 +17,10 @@ const Projects = () => {
       <div className="flex flex-col gap-24">
         <Project id = {1}/>
         <Project id = {2}/>
-        <a className = "p-4 ml-auto mr-auto bg-red-400 rounded-md cursor-pointer hover:bg-red-500">View More <span> <FaGithub /> </span></a>
+        <a className = "flex items-center gap-2 p-4 ml-auto mr-auto bg-red-400 rounded-md cursor-pointer hover:bg-red-500" href = "https://github.com/noviceCoder27/" target = "_blank" rel="noreferrer">
+          <span>View More</span> 
+          <span> <FaGithub /> </span>
+        </a>
       </div>
     </div>
   )
