@@ -29,9 +29,15 @@ const Contact = () => {
           <div>
             <p className="font-semibold">Check out my socials</p>
             <div className="flex gap-3 mt-3 text-xl">
-              <BsGithub className="cursor-pointer hover:text-red-500"/>
-              <BsTwitter className="cursor-pointer hover:text-red-500"/>
-              <BsLinkedin className="cursor-pointer hover:text-red-500"/>
+              <a href= "https://github.com/noviceCoder27" target="_blank" rel="noreferrer">
+                <BsGithub className="cursor-pointer hover:text-red-500"/>
+              </a>
+              <a href= "https://twitter.com/mugdhatanu" target="_blank" rel="noreferrer">
+                <BsTwitter className="cursor-pointer hover:text-red-500"/>
+              </a>
+              <a href= "https://www.linkedin.com/in/mugdhatanu-dev-goswami-aa3b79214/" target="_blank" rel="noreferrer">
+                <BsLinkedin className="cursor-pointer hover:text-red-500"/>
+              </a>      
             </div>
           </div>
         </div>

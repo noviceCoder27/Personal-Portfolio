@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { ThemeContext } from "../utils/Context"
 import {BsFileEarmarkPdf} from 'react-icons/bs'
 import MyImage from './../assets/Me.jpg'
+import Resume from './../assets/My_Resume.pdf'
+
 
 const About = () => {
   const {isDark} = useContext(ThemeContext);
@@ -23,10 +25,10 @@ const About = () => {
           <p className={`max-md:mt-5 md:mt-10 text-start md:text-lg ${isDark ? 'text-slate-300 ' : 'text-slate-700'}`}>
             Hi, I&#039;m Mugdhatanu Dev Goswami, a Computer Science engineer mostly focusing on building web applications. I am passionate about creating intuitive, user-friendly web applications providing a seamless experience for users. I am always up for new challenges and tasks trying to upkskill myself andlearn new technologies to stay up-to-date with industry trends. 
           </p>
-          <button className="flex items-center gap-3 p-5 text-lg text-red-400 border-2 border-red-400 rounded-md max-md:mt-8 md:mt-14 hover:text-red-500 hover:border-red-500 ">
+          <a className="flex items-center gap-3 p-5 text-lg text-red-400 border-2 border-red-400 rounded-md cursor-pointer w-fit max-md:mt-8 md:mt-14 hover:text-red-500 hover:border-red-500" href={Resume} download="MyResume">
             <BsFileEarmarkPdf />
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
